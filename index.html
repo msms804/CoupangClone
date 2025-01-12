@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <title>Coupang</title>
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #container>div {
+            width: 100%;
+            max-width: 1920px;
+            /* 중앙 정렬 */
+            margin: 0 auto;
+            /* display: inline-block; */
+        }
+
+        #header {
+            position: relative;
+        }
+
+        #top-bar {
+            width: 1020px;
+            height: 32px;
+            background: #f0f0f0;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+        }
+
+        #top-bar-left>ul,
+        #top-bar-right>ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            /* text-align: left; */
+        }
+
+        #top-bar-left li,
+        #top-bar-right li {
+            padding: 10px 0px 0px 12px;
+            /* text-align: left; */
+        }
+
+        #category-btn {
+            position: absolute;
+            background-color: aquamarine;
+            width: 110px;
+            height: 115px;
+            top: 32px;
+            left: 0;
+            margin-right: 30px;
+            background-position: 0 0;
+            text-align: center;
+        }
+
+        #category-btn>a {
+            display: block;
+            color: #fff;
+            margin-top: 73px;
+            font-size: 13px;
+        }
+
+        .logo img {
+            /* display: block; */
+            width: 174px;
+            height: 41px;
+            margin: 2px 20px 0 0;
+            /* float: left; */
+        }
+
+        #search-form-wrap {
+            display: flex;
+        }
+
+        #product-search-form {
+            width: 518px;
+            height: 37px;
+            margin-right: 22px;
+            border: 2px solid #4285f4;
+        }
+
+        #product-search-form>form {
+            display: flex;
+        }
+
+        #icon-menus {
+            display: flex;
+            list-style: none;
+        }
+
+        #icon-menus>#my-coupang-more,
+        #icon-menus>#cart-more {
+            width: 50px;
+            height: 52px;
+        }
+
+        #my-coupang-title,
+        #cart-title {
+            color: #212b36;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 15px;
+        }
+
+        .gnb-menu-scroll {
+            display: flex;
+            list-style: none;
+        }
+
+        .gnb-menu-item {
+            display: inline-block;
+            margin-left: 10px;
+            padding: 0 5px;
+        }
+
+        .gnb-menu-item>a {
+            height: 32px;
+            line-height: 32px;
+            font-size: 12px;
+            color: #333;
+        }
+
+        .gnb-menu-item img {
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <header id="header">
+                <article id="top-bar">
+                    <div id="top-bar-left">
+                        <ul>
+                            <li><a>즐겨찾기</a></li>
+                            <li><a>입점신청</a></li>
+                        </ul>
+                    </div>
+                    <div id="top-bar-right">
+                        <ul>
+                            <li><a>로그인</a></li>
+                            <li><a>회원가입</a></li>
+                            <li><a>고객센터</a></li>
+                            <li><a>판매자 가입</a></li>
+                        </ul>
+                    </div>
+
+                </article>
+                <section>
+                    <div id="category-btn">
+                        <a>카테고리</a>
+                    </div>
+                    <div id="search-form-wrap">
+                        <span class="logo">
+                            <a>
+                                <img src="./logo_coupang_w350.png" />
+                            </a>
+                        </span>
+                        <div id="product-search-form">
+                            <form>
+                                <div>전체</div>
+                                <input placeholder="찾고 싶은 상품을 검색해보세요!" />
+                                <a>검색</a>
+                            </form>
+                        </div>
+                        <ul id="icon-menus">
+                            <li id="my-coupang-more">
+                                <a>
+                                    <span></span>
+                                    <span id="my-coupang-title">마이쿠팡</span>
+                                </a>
+                            </li>
+                            <li id="cart-more">
+                                <a>
+                                    <span></span>
+                                    <span id="cart-title">장바구니</span>
+                                    <!-- <em id="headerCartCount">0</em> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="gnb-menu-container">
+                        <div id="gnb-menu-button-left"></div>
+                        <ul class="gnb-menu-scroll">
+                            <li class="gnb-menu-item"><a><img
+                                        src="./coupang_play_logo_2024@3x.png" /><span>쿠팡플레이</span></a>
+                            </li>
+                            <li class="gnb-menu-item"><a><img src="./로켓배송.png" /><span>로켓배송</span></a></li>
+                            <li class="gnb-menu-item"><a><img src="./rocket_fresh.png" /><span>로켓프레시</span></a></li>
+                            <li class="gnb-menu-item"><a><img src="./LNY_PC.png" /><span>2025 설</span></a></li>
+                            <li class="gnb-menu-item"><a><img src="./logoBizonlyBrown.png" /><span>쿠팡비즈</span></a></li>
+                            <li class="gnb-menu-item"><a><img src="./Overseas.png" /><span>로켓직구</span></a></li>
+                            <li class="gnb-menu-item"><a><span>골드박스</span></a></li>
+                            <li class="gnb-menu-item"><a><img
+                                        src="./omp_pc_shortcut_20240510.png" /><span>판매자특가</span></a>
+                            </li>
+                            <li class="gnb-menu-item"><a><span>와우회원할인</span></a></li>
+                            <li class="gnb-menu-item"><a><span>이벤트/쿠폰</span></a></li>
+                        </ul>
+                        <div id="gnb-menu-button-right"></div>
+                    </div>
+                </section>
+            </header>
+        </div>
+
+        <div id="main">
+            메인
+        </div>
+        <div id="content">콘텐츠</div>
+    </div>
+</body>
+
+</html>
